@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-box">
+        <h2>Toko Buku Online</h2>
+        <form id="login-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Masukkan email">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" required placeholder="Masukkan password">
+            
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        
+        <p style="margin-top: 20px;">
+            <button class="btn" onclick="showModal('Lupa Password', 'Silakan hubungi admin untuk reset password.')">Lupa Password</button>
+            <button class="btn" onclick="showModal('Daftar Akun', 'Fitur Daftar dinonaktifkan. Gunakan email: rina@gmail.com / situs@gmail.com')">Daftar</button>
+        </p>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Modal Title</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div id="modal-body">Modal content here...</div>
+    </div>
+</div>
+
+<script src="js/data.js"></script> 
+<script src="js/script.js"></script>
+
+</body>
+</html>

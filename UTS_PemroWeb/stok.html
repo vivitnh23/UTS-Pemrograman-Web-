@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok & Katalog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Toko Buku Online</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html" id="nav-stok">Informasi Stok/Katalog</a> 
+            <a href="tracking.html">Tracking Pengiriman</a>
+            <a href="checkout.html">Pemesanan/Histori</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Informasi Stok & Katalog Buku</h1>
+
+    <div id="add-stock-form">
+        <h3>Tambah Buku Baru (Admin Only)</h3>
+        <form id="form-tambah-buku">
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <input type="text" id="kodeBarang" name="kodeBarang" placeholder="Kode Barang" required style="flex: 1;">
+                <input type="text" id="namaBarang" name="namaBarang" placeholder="Nama Barang" required style="flex: 2;">
+                <input type="text" id="jenisBarang" name="jenisBarang" placeholder="Jenis" style="flex: 1;">
+                <input type="text" id="edisi" name="edisi" placeholder="Edisi" style="flex: 1;">
+                <input type="number" id="stok" name="stok" placeholder="Stok" required style="flex: 1;">
+                <input type="number" id="harga" name="harga" placeholder="Harga (Angka Murni)" required style="flex: 1;">
+                <input type="text" id="cover" name="cover" placeholder="assets/img/namafile.jpg (Optional)" style="flex: 2;">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Tambah Buku</button>
+        </form>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <table id="katalog-table" class="data-table">
+        <thead>
+            <tr>
+                <th>Cover</th>
+                <th>Kode</th>
+                <th>Nama Barang</th>
+                <th>Jenis</th>
+                <th>Edisi</th>
+                <th>Stok</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Modal Title</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div id="modal-body">Modal content here...</div>
+    </div>
+</div>
+
+<script src="js/data.js"></script> 
+<script src="js/script.js"></script>
+
+</body>
+</html>

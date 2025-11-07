@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan & Histori</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Toko Buku Online</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Informasi Stok/Katalog</a>
+            <a href="tracking.html">Tracking Pengiriman</a>
+            <a href="checkout.html">Pemesanan/Histori</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Keranjang Belanja & Checkout</h1>
+
+    <div class="checkout-grid">
+        <div>
+            <h2>Daftar Item</h2>
+            <table id="keranjang-table" class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nama Buku</th>
+                        <th>Harga Satuan</th>
+                        <th>Jumlah</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="3" style="text-align: right;">Total Pembayaran:</td>
+                        <td id="total-pembayaran">Rp 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="checkout-form">
+                <h3>Informasi Pesanan & Pembayaran</h3>
+                <form id="checkout-form">
+                    <h4>Informasi Pengiriman</h4>
+                    <input type="text" placeholder="Alamat Pengiriman Lengkap" required>
+                    <input type="text" placeholder="Nomor Telepon" required>
+
+                    <h4>Metode Pembayaran</h4>
+                    <select style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;" required>
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="transfer">Transfer Bank</option>
+                        <option value="e-wallet">E-Wallet</option>
+                    </select>
+                    
+                    <button type="submit" id="proses-pesanan" class="btn btn-primary" style="width: 100%;">Proses Pesanan</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="checkout-summary">
+            <h3><span style="font-size: 1.2em;">&#128339;</span> Histori Transaksi</h3>
+            <table id="histori-table" class="data-table">
+                <thead>
+                    <tr>
+                        <th>No. Pesanan</th>
+                        <th>Tanggal</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Modal Title</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div id="modal-body">Modal content here...</div>
+    </div>
+</div>
+
+<script src="js/data.js"></script> 
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan & Histori</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <header id="global-header">
+        <h1 id="app-title">📚 Toko Buku Online</h1>
+        <nav id="app-navigation">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html" id="nav-stok">Informasi Stok/Katalog</a>
+            <a href="tracking.html">Tracking Pengiriman</a>
+            <a href="checkout.html">Pemesanan/Histori</a>
+            <button id="logout-button-nav" onclick="handleLogout()">Logout</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div id="checkout-section">
+            <h2>🛒 Keranjang Belanja & Checkout</h2>
+            <h3>Daftar Item</h3>
+            <table id="keranjang-table">
+                <thead>
+                    <tr>
+                        <th>Nama Buku</th>
+                        <th>Harga Satuan</th>
+                        <th>Jumlah</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align: right; font-weight: bold;">Total Pembayaran</td>
+                        <td id="total-pembayaran" style="font-weight: bold;">Rp 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <hr>
+
+            <h3>Form Pemesanan & Pembayaran</h3>
+            <form id="checkout-form">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label for="nama-pemesan">Nama Pemesan:</label>
+                        <input type="text" id="nama-pemesan" required>
+
+                        <label for="alamat-kirim">Alamat Pengiriman:</label>
+                        <textarea id="alamat-kirim" required rows="3"></textarea>
+                    </div>
+                    <div>
+                        <label for="jenis-paket">Jenis Paket:</label>
+                        <select id="jenis-paket" required>
+                            <option value="">Pilih Paket Pengiriman</option>
+                            <option value="Reguler">Reguler</option>
+                            <option value="Express">Express</option>
+                        </select>
+
+                        <label for="metode-bayar">Metode Pembayaran:</label>
+                        <select id="metode-bayar" required>
+                            <option value="">Pilih Metode Pembayaran</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="Kartu Kredit">Kartu Kredit</option>
+                            <option value="Virtual Account">Virtual Account</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" id="proses-pesanan" class="btn-primary" disabled>Proses Pesanan</button>
+            </form>
+        </div>
+
+        <hr>
+        
+        <h2>🕒 Histori Transaksi</h2>
+        <table id="histori-table">
+            <thead>
+                <tr>
+                    <th>No. Pesanan</th>
+                    <th>Tanggal</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

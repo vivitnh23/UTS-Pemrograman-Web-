@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Toko Buku Online</div>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Informasi Stok/Katalog</a>
+            <a href="tracking.html">Tracking Pengiriman</a>
+            <a href="checkout.html">Pemesanan/Histori</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Lacak Pengiriman Anda</h1>
+
+    <div class="tracking-input">
+        <input type="text" id="nomor-do" placeholder="Masukkan Nomor Delivery Order (Contoh: 20230012)">
+        <button id="cari-do" class="btn btn-primary">Cari</button>
+    </div>
+
+    <div id="tracking-result" class="tracking-details">
+        <h2>Informasi Pengiriman</h2>
+        <div class="tracking-info">
+            <p><strong>Nama Pemesan:</strong> <span id="nama-pemesan-track">-</span></p>
+            <p><strong>Ekspedisi:</strong> <span id="ekspedisi">-</span></p>
+            <p><strong>Tanggal Kirim:</strong> <span id="tanggal-kirim">-</span></p>
+            <p><strong>Jenis Paket:</strong> <span id="jenis-paket-track">-</span></p>
+            <p><strong>Total Pembayaran:</strong> <span id="total-bayar-track">-</span></p>
+            <p><strong>Status Terakhir:</strong> <span id="status-pengiriman">-</span></p>
+        </div>
+
+        <h3 style="margin-top: 20px;">Simulasi Progress</h3>
+        <div class="tracking-progress">
+            <div id="progress-bar-simulasi" class="progress-bar-container">
+                </div>
+        </div>
+
+        <h3 style="margin-top: 30px;">Riwayat Perjalanan</h3>
+        <table id="riwayat-table" class="data-table">
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modal-title">Modal Title</h3>
+            <span class="close-button">&times;</span>
+        </div>
+        <div id="modal-body">Modal content here...</div>
+    </div>
+</div>
+
+<script src="js/data.js"></script> 
+<script src="js/script.js"></script>
+</body>
+</html>
